@@ -1,3 +1,9 @@
+# revision 16881
+# category Package
+# catalog-ctan /systems/enctex
+# catalog-date 2010-01-22 21:32:36 +0100
+# catalog-license gpl
+# catalog-version undef
 Name:		texlive-enctex
 Version:	20100122
 Release:	1
@@ -87,6 +93,7 @@ sequences, such as utf-8 encoding.
 %doc %{_texmfdistdir}/doc/generic/enctex/unimap.diff
 %doc %{_texmfdistdir}/doc/generic/enctex/unimap.py
 %doc %{_texmfdistdir}/doc/generic/enctex/vlna.tex
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -97,3 +104,5 @@ sequences, such as utf-8 encoding.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
