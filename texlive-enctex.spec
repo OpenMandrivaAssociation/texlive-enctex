@@ -17,8 +17,6 @@ BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
 Requires(post):	texlive-kpathsea
-Conflicts:	texlive-texmf <= 20110705-3
-Conflicts:	texlive-doc <= 20110705-3
 
 %description
 EncTeX is (another) tex extension, written at the change-file
@@ -26,20 +24,12 @@ level. It provides means of translating input on the way into
 TeX. It allows, for example, translation of multibyte
 sequences, such as utf-8 encoding.
 
-%pre
-    %_texmf_mktexlsr_pre
-
 %post
-    %_texmf_mktexlsr_post
-
-%preun
-    if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_pre
-    fi
+    %{_sbindir}/texlive.post
 
 %postun
     if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_post
+	%{_sbindir}/texlive.post
     fi
 
 #-----------------------------------------------------------------------
@@ -94,7 +84,6 @@ sequences, such as utf-8 encoding.
 %doc %{_texmfdistdir}/doc/generic/enctex/unimap.diff
 %doc %{_texmfdistdir}/doc/generic/enctex/unimap.py
 %doc %{_texmfdistdir}/doc/generic/enctex/vlna.tex
-%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -105,5 +94,3 @@ sequences, such as utf-8 encoding.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
-mkdir -p %{buildroot}%{_tlpkgobjdir}
-cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
