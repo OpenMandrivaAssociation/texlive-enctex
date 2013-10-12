@@ -1,12 +1,12 @@
-# revision 16881
+# revision 28602
 # category Package
 # catalog-ctan /systems/enctex
-# catalog-date 2010-01-22 21:32:36 +0100
+# catalog-date 2012-11-01 10:06:10 +0100
 # catalog-license gpl
 # catalog-version undef
 Name:		texlive-enctex
-Version:	20100122
-Release:	2
+Version:	20121101
+Release:	1
 Summary:	A TeX extension that translates input on its way into TeX
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/systems/enctex
@@ -54,6 +54,7 @@ sequences, such as utf-8 encoding.
 %{_texmfdistdir}/tex/generic/enctex/kam-il2.tex
 %{_texmfdistdir}/tex/generic/enctex/kam-latex.tex
 %{_texmfdistdir}/tex/generic/enctex/kam-t1.tex
+%{_texmfdistdir}/tex/generic/enctex/mixcodes.tex
 %{_texmfdistdir}/tex/generic/enctex/noprefnt.tex
 %{_texmfdistdir}/tex/generic/enctex/plain-1250-cs.tex
 %{_texmfdistdir}/tex/generic/enctex/plain-852-cs.tex
@@ -66,7 +67,10 @@ sequences, such as utf-8 encoding.
 %{_texmfdistdir}/tex/generic/enctex/utf8-csf.tex
 %{_texmfdistdir}/tex/generic/enctex/utf8-t1.tex
 %{_texmfdistdir}/tex/generic/enctex/utf8cseq.tex
+%{_texmfdistdir}/tex/generic/enctex/utf8lat1.tex
+%{_texmfdistdir}/tex/generic/enctex/utf8lata.tex
 %{_texmfdistdir}/tex/generic/enctex/utf8math.tex
+%{_texmfdistdir}/tex/generic/enctex/utf8off.tex
 %{_texmfdistdir}/tex/generic/enctex/utf8raw.tex
 %{_texmfdistdir}/tex/generic/enctex/utf8unkn.tex
 %{_texmfdistdir}/tex/generic/enctex/utf8warn.tex
@@ -94,17 +98,3 @@ sequences, such as utf-8 encoding.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 20100122-2
-+ Revision: 751415
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 20100122-1
-+ Revision: 718329
-- texlive-enctex
-- texlive-enctex
-- texlive-enctex
-- texlive-enctex
-
