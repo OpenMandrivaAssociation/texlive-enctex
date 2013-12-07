@@ -6,7 +6,7 @@
 # catalog-version undef
 Name:		texlive-enctex
 Version:	20121101
-Release:	4
+Release:	5
 Summary:	A TeX extension that translates input on its way into TeX
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/systems/enctex
