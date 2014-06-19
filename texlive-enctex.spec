@@ -1,12 +1,12 @@
-# revision 28602
+# revision 34088
 # category Package
 # catalog-ctan /systems/enctex
-# catalog-date 2012-11-01 10:06:10 +0100
+# catalog-date 2014-05-09 09:19:54 +0200
 # catalog-license gpl
 # catalog-version undef
 Name:		texlive-enctex
-Version:	20121101
-Release:	6
+Version:	20140509
+Release:	1
 Summary:	A TeX extension that translates input on its way into TeX
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/systems/enctex
