@@ -1,5 +1,5 @@
 Name:		texlive-enctex
-Version:	20170414
+Version:	20180303
 Release:	1
 Summary:	A TeX extension that translates input on its way into TeX
 Group:		Publishing
