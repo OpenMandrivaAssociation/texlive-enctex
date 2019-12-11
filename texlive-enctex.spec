@@ -1,6 +1,6 @@
 Name:		texlive-enctex
 Version:	20190228
-Release:	1
+Release:	2
 Summary:	A TeX extension that translates input on its way into TeX
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/systems/enctex
