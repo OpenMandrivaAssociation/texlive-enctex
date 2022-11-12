@@ -1,12 +1,12 @@
 Name:		texlive-enctex
-Version:	20190228
-Release:	2
+Version:	34957
+Release:	1
 Summary:	A TeX extension that translates input on its way into TeX
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/systems/enctex
 License:	GPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/enctex.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/enctex.doc.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/enctex.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/enctex.doc.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -19,12 +19,12 @@ TeX. It allows, for example, translation of multibyte
 sequences, such as utf-8 encoding.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -33,7 +33,7 @@ sequences, such as utf-8 encoding.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1
+%autosetup -p1 -c -a1
 
 %build
 
