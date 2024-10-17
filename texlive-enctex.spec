@@ -3,7 +3,7 @@ Version:	34957
 Release:	2
 Summary:	A TeX extension that translates input on its way into TeX
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/systems/enctex
+URL:		https://www.ctan.org/tex-archive/systems/enctex
 License:	GPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/enctex.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/enctex.doc.r%{version}.tar.xz
